@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    .container{
+      width: 80%;
+      height: 80vh;
+      background-color: hsl(30, 38%, 92%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 10%;
+      margin-top: 100px;
+    }
+    .frame{
+      display: grid;
+      grid-template-columns: 250px 125px 125px;
+      grid-template-rows: 50px 120px 90px 50px 75px;
+    }
+   
+    .picture{
+      grid-row: span 5;
+    }
+    .perf{
+      grid-column: span 2;
+      background-color: hsl(0, 0%, 100%);
+    }
+    .heading{
+      grid-column: span 2;
+      background-color: hsl(0, 0%, 100%);
+    }
+    .text{
+      grid-column: span 2;
+      background-color: hsl(0, 0%, 100%);
+    }
+    .add{
+      grid-column: span 2;
+      background-color: hsl(0, 0%, 100%);
+    }
+    .price{
+      grid-column: span 2;
+      background-color: hsl(0, 0%, 100%);
+      display: grid;
+      grid-template-columns: 125px 125px;
+      grid-template-rows: 75px;
+
+      background-color: hsl(0, 0%, 100%);
+    }
+    #perfume{
+    position: relative;
+    left: 20px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    }
+    #headingText{
+      width: 80%;
+      font-size: 30px;
+      font-weight: bold;
+      position: relative;
+      left: 20px;
+      top: -25px;
+    }
+    #textid{
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+      left: 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      width: 90%;
+    }
+    #mainPrice{
+      font-size: 25px;
+      position: relative;
+      left: 20px;
+      top: -25%;
+      color: hsl(133, 63%, 46%);
+      font-weight: bolder;
+      font-family: "Fraunces", sans-serif;
+    }
+    #chippedprice{
+      font-family: "Fraunces", sans-serif;
+      position: relative;
+      left: 15px;
+      font-size: 14px;
+      text-decoration: line-through;
+      color: hsl(213, 11%, 60%);
+    }
+    
+    #trolley{
+      width: 10px;
+      color: aliceblue;
+    }
+    .addBox{
+      background-color: hsl(158, 36%, 37%);
+      border: none;
+      color: white;
+      width: 200px;
+      height: 40px;
+      position: relative;
+      left: 15px;
+      top: 20px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      border-radius: 10px 10px 10px 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    #pict{
+      width: 100%;
+      height: 100%;
+    }
+    
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="frame">
+      <div class="items picture">
+        <img id="pict" src="./images/image-product-desktop.jpg">
+      </div>
+      <div class="items perf">
+        <p id="perfume">PERFUME</p>
+      </div>
+      <div class="items heading">
+        <p id="headingText">Gabrielle Essence Eau De Parfum</p>
+      </div>
+      <div class="items text">
+        <p id="textid">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.</p>
+      </div>
+      <div class="items price">
+        <p id="mainPrice">$149.99</p>
+        <p id="chippedprice">$169.99</p>
+      </div>
+      <div class="items add">
+        <button class="addBox">
+          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 
+
+  $149.99
+  $169.99
+
+  Add to Cart -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kamil Ozkayhan</a>.
+  </div>
+</body>
+</html>
+
+<!-- # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+
+> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma. -->
